@@ -7,4 +7,4 @@ This project is an implementation of neural machine translation (NMT) from Engli
 Adjust parameters for the model in constants.py. Start training by running python train.py
 
 ### Inference
-python evaluate.py -t <Sentence in English>
+python evaluate.py -t < Sentence in English >
