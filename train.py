@@ -71,11 +71,11 @@ def train():
         pickle.dump(output_tokenizer, handle, protocol=pickle.HIGHEST_PROTOCOL)
     
     input_sequences = input_tokenizer.texts_to_sequences(english)
-    X_train = tf.keras.preprocessing.sequence.pad_sequences(input_sequences, maxlen=constants.num_encoder_tokens, 
+    X_train = tf.keras.preprocessing.sequence.pad_sequences(input_sequences,
                                                             truncating='post', padding='post')
     
     target_sequences = output_tokenizer.texts_to_sequences(german)
-    Y_train = tf.keras.preprocessing.sequence.pad_sequences(target_sequences, maxlen=constants.num_decoder_tokens, 
+    Y_train = tf.keras.preprocessing.sequence.pad_sequences(target_sequences,
                                                             truncating='post', padding='post')
     
     BUFFER_SIZE = len(X_train)

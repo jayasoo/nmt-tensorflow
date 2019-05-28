@@ -54,7 +54,7 @@ def evaluate(text):
     result = beam_search(constants.beam_width, decoder, dec_input, dec_hidden, 
                          enc_outputs, output_tokenizer.word_index['<end>'], output_vocab_size)
     result = output_tokenizer.sequences_to_texts([result])
-    print(result)
+    print(result[0])
     
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
